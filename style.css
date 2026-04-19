@@ -599,6 +599,70 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   background-clip: text;
 }
 
+/* ---- Coming Soon State ---- */
+.product-card.coming-soon {
+  cursor: default;
+  pointer-events: none; /* disable all hover/click */
+}
+
+.product-card.coming-soon .product-img-wrap img {
+  filter: grayscale(60%) brightness(0.55);
+}
+
+.product-card.coming-soon:hover {
+  transform: none;
+  border-color: var(--border);
+  box-shadow: none;
+}
+
+.product-card.coming-soon .product-price {
+  background: none;
+  -webkit-background-clip: unset;
+  -webkit-text-fill-color: var(--text-muted);
+  background-clip: unset;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.coming-soon-badge {
+  position: absolute;
+  top: 0.85rem;
+  left: 0.85rem;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0.35rem 0.9rem;
+  background: rgba(10, 8, 20, 0.82);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(155, 89, 255, 0.45);
+  border-radius: 100px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--purple-bright);
+  z-index: 4;
+  box-shadow: 0 0 16px rgba(155, 89, 255, 0.2);
+}
+
+.cs-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--purple-neon);
+  box-shadow: 0 0 8px var(--purple-neon);
+  animation: csPulse 1.6s ease-in-out infinite;
+  flex-shrink: 0;
+}
+
+@keyframes csPulse {
+  0%, 100% { opacity: 1;   transform: scale(1);    box-shadow: 0 0 6px var(--purple-neon); }
+  50%       { opacity: 0.5; transform: scale(1.35); box-shadow: 0 0 14px var(--purple-neon); }
+}
+
 /* ============================================================
    REVIEWS SECTION
    ============================================================ */

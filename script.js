@@ -20,6 +20,7 @@ const products = [
   {
     name: "Beyond Survival Setup",
     price: "$9.99",
+    status: "available",   // ← "available" or "coming_soon"
     description: "A fully-featured survival server package perfect for growing communities. Comes pre-configured with anti-cheat, economy, land claiming, and beautifully custom-built spawn.",
     features: [
       "Custom hand-built spawn (200x200)",
@@ -37,8 +38,9 @@ const products = [
     buyLink: "https://builtbybit.com/resources/beyond-survival-setup-habibi-studios.96782/"
   },
   {
-    name: "Beyond Survival Spawn ",
+    name: "Beyond Survival Spawn",
     price: "$3.99",
+    status: "available",   // ← "available" or "coming_soon"
     description: "Affordable, well-designed spawn featuring a crate area, AFK zone, spawn point, shop area, and PvP.",
     features: [
       "Houses with interiors",
@@ -58,6 +60,7 @@ const products = [
   {
     name: "PLAYKITS 2 Advance Kits Conflig",
     price: "$2.99",
+    status: "available", // ← "available" or "coming_soon"
     description: "A fully configured kit system including pre-made kits, a main menu, and customizable messages.",
     features: [
       "Good looking kit menu",
@@ -258,33 +261,49 @@ function animateCounter(el) {
   if (!grid) return;
 
   products.forEach((p, idx) => {
+    const isComingSoon = p.status === "coming_soon";
+
     const card = document.createElement("div");
-    card.className = "product-card";
+    card.className = "product-card" + (isComingSoon ? " coming-soon" : "");
     card.setAttribute("data-delay", `${(idx % 3) * 80}`);
-    card.setAttribute("tabindex", "0");
-    card.setAttribute("role", "button");
-    card.setAttribute("aria-label", `View ${p.name}`);
+
+    if (!isComingSoon) {
+      card.setAttribute("tabindex", "0");
+      card.setAttribute("role", "button");
+      card.setAttribute("aria-label", `View ${p.name}`);
+    }
 
     const imgHTML = p.images && p.images.length > 0
       ? `<img src="${p.images[0]}" alt="${p.name}" loading="lazy" />`
       : `<div class="img-placeholder"><span>🎮</span><small>Preview</small></div>`;
 
+    const hintHTML = isComingSoon
+      ? ``
+      : `<div class="product-view-hint">View Details →</div>`;
+
+    const badgeHTML = isComingSoon
+      ? `<div class="coming-soon-badge"><span class="cs-dot"></span>Coming Soon</div>`
+      : ``;
+
     card.innerHTML = `
       <div class="product-img-wrap">
         ${imgHTML}
         <div class="product-img-overlay"></div>
-        <div class="product-view-hint">View Details →</div>
+        ${badgeHTML}
+        ${hintHTML}
       </div>
       <div class="product-info">
         <div class="product-name">${p.name}</div>
-        <div class="product-price">${p.price}</div>
+        <div class="product-price">${isComingSoon ? "Coming Soon" : p.price}</div>
       </div>
     `;
 
-    // Open modal
-    const open = () => openModal(idx);
-    card.addEventListener("click", open);
-    card.addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " ") open(); });
+    // Only open modal if available
+    if (!isComingSoon) {
+      const open = () => openModal(idx);
+      card.addEventListener("click", open);
+      card.addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " ") open(); });
+    }
 
     grid.appendChild(card);
   });
