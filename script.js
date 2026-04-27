@@ -32,8 +32,7 @@ const products = [
       "Discord bot integration"
     ],
     images: [
-      "https://builtbybit.com/attachments/gemini_generated_image_8ybsuo8ybsuo8ybs-png.1236180/?preset=cardr1",
-      "https://builtbybit.com/attachments/2026-03-03_16-39-21-png.1233113/?preset=cardr1"
+      "https://cdn.discordapp.com/attachments/1496165026447233187/1498192139329212416/20260414_201639.jpg?ex=69f043a9&is=69eef229&hm=664ef06e647d6d63cd67c00061c40a4ce58ccc9eb4a34574ada73f2f2d9ecac9&"
     ],
     buyLink: "https://builtbybit.com/resources/beyond-survival-setup-habibi-studios.96782/"
   },
