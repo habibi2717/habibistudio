@@ -32,7 +32,7 @@ const products = [
       "Discord bot integration"
     ],
     images: [
-      "https://cdn.discordapp.com/attachments/1496165026447233187/1498192140583305327/20260307_105724.png?ex=69f043a9&is=69eef229&hm=baf6e875644ffb30e1bfd791266e3d2a53a2616dea24c4a764cebb2987198260&c00061c40a4ce58ccc9eb4a34574ada73f2f2d9ecac9&"
+      "https://cdn.discordapp.com/attachments/1496165026447233187/1498193217861058620/Gemini_Generated_Image_8ybsuo8ybsuo8ybs.png?ex=69f044aa&is=69eef32a&hm=5e085b06d9c5a912b2c7a0c1b66f96e4be0eaa6b289bcb60dc4e821f0d13ef76&bb2987198260&c00061c40a4ce58ccc9eb4a34574ada73f2f2d9ecac9&"
     ],
     buyLink: "https://builtbybit.com/resources/beyond-survival-setup-habibi-studios.96782/"
   },
@@ -50,9 +50,8 @@ const products = [
       "Drop-down portal",
     ],
     images: [
-      "https://builtbybit.com/attachments/20260307_105724-png.1236899/?preset=cardr1",
-      "https://builtbybit.com/attachments/2026-03-03_16-55-53-png.1236907/?preset=cardr1",
-      "https://builtbybit.com/attachments/2026-03-03_16-33-43-png.1236913/?preset=cardr1"
+      "https://cdn.discordapp.com/attachments/1496165026447233187/1498192140583305327/20260307_105724.png?ex=69f043a9&is=69eef229&hm=baf6e875644ffb30e1bfd791266e3d2a53a2616dea24c4a764cebb2987198260&",
+      
     ],
     buyLink: "https://builtbybit.com/resources/beyond-survival-spawn-nfx-studio.97428/"
   },
@@ -69,8 +68,6 @@ const products = [
     ],
     images: [
       "https://cdn.discordapp.com/attachments/1496165026447233187/1498192139329212416/20260414_201639.jpg?ex=69f043a9&is=69eef229&hm=664ef06e647d6d63cd67c00061c40a4ce58ccc9eb4a34574ada73f2f2d9ecac9&",
-      "https://builtbybit.com/attachments/banner-png.1289643/?preset=fullr1",
-      "https://builtbybit.com/attachments/has-permission-png.1289689/?preset=fullr1"
     ],
     buyLink: "https://builtbybit.com/resources/playkits-2-advance-kits-conflig-hs.103511/"
   }
