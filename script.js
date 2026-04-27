@@ -32,7 +32,7 @@ const products = [
       "Discord bot integration"
     ],
     images: [
-      "https://cdn.discordapp.com/attachments/1496165026447233187/1498192139329212416/20260414_201639.jpg?ex=69f043a9&is=69eef229&hm=664ef06e647d6d63cd67c00061c40a4ce58ccc9eb4a34574ada73f2f2d9ecac9&"
+      "https://cdn.discordapp.com/attachments/1496165026447233187/1498192140583305327/20260307_105724.png?ex=69f043a9&is=69eef229&hm=baf6e875644ffb30e1bfd791266e3d2a53a2616dea24c4a764cebb2987198260&c00061c40a4ce58ccc9eb4a34574ada73f2f2d9ecac9&"
     ],
     buyLink: "https://builtbybit.com/resources/beyond-survival-setup-habibi-studios.96782/"
   },
@@ -68,7 +68,7 @@ const products = [
       "Easy to edit"
     ],
     images: [
-      "https://builtbybit.com/attachments/20260414_201639-jpg.1289697/?preset=cardr1",
+      "https://cdn.discordapp.com/attachments/1496165026447233187/1498192139329212416/20260414_201639.jpg?ex=69f043a9&is=69eef229&hm=664ef06e647d6d63cd67c00061c40a4ce58ccc9eb4a34574ada73f2f2d9ecac9&",
       "https://builtbybit.com/attachments/banner-png.1289643/?preset=fullr1",
       "https://builtbybit.com/attachments/has-permission-png.1289689/?preset=fullr1"
     ],
