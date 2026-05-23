@@ -67,7 +67,7 @@ const products = [
       "Easy to edit"
     ],
     images: [
-      "https://cdn.discordapp.com/attachments/1490693971813466133/1507586084912103494/1776153252125.png?ex=6a127074&is=6a111ef4&hm=6a75e1da9ea5d477a49ce6cbe54823cac59f190d671a9d778e75721ee6a30bf0&3f2f2d9ecac9&",
+      "https://cdn.discordapp.com/attachments/1490693971813466133/1507587278883786853/20260414_201639.jpg?ex=6a127190&is=6a112010&hm=574df969a71f9ad92ab357457e1ea3d05aa6c083eeb3e0440465148c043e444d&9ce6cbe54823cac59f190d671a9d778e75721ee6a30bf0&3f2f2d9ecac9&",
     ],
     buyLink: "https://builtbybit.com/resources/playkits-2-advance-kits-conflig-hs.103511/"
   }
