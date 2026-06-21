@@ -12,7 +12,7 @@ const heroStats = [
   { target: 5,   suffix: "★", label: "Rating"    }
 ];
 
-/* ---- PRODUCTS DATA — all BuiltByBit listings ---- */
+/* ---- PRODUCTS DATA ---- */
 const products = [
   {
     name: "Beyond Survival Setup",
@@ -238,7 +238,7 @@ const links = [
    ============================================================ */
 (function initNavbar() {
   const navbar = document.getElementById("navbar");
-  const links  = document.querySelectorAll(".nav-link");
+  const navLinks = document.querySelectorAll(".nav-link");
   const sections = document.querySelectorAll("section[id]");
 
   window.addEventListener("scroll", () => {
@@ -249,7 +249,7 @@ const links = [
     sections.forEach(sec => {
       if (window.scrollY >= sec.offsetTop - 120) current = sec.id;
     });
-    links.forEach(l => {
+    navLinks.forEach(l => {
       l.classList.toggle("active", l.getAttribute("href") === "#" + current);
     });
   });
@@ -295,7 +295,7 @@ function animateCounter(el) {
 }
 
 /* ============================================================
-   SCROLL REVEAL
+   SCROLL REVEAL — mobile fixed
    ============================================================ */
 (function initReveal() {
   const io = new IntersectionObserver((entries) => {
@@ -313,9 +313,20 @@ function animateCounter(el) {
         io.unobserve(el);
       }
     });
-  }, { threshold: 0.12 });
+  }, { threshold: 0, rootMargin: "0px 0px -10px 0px" });
 
   document.querySelectorAll(".reveal").forEach(el => io.observe(el));
+
+  // Force trigger anything already in viewport on load
+  setTimeout(() => {
+    document.querySelectorAll(".reveal:not(.visible)").forEach(el => {
+      const rect = el.getBoundingClientRect();
+      if (rect.top < window.innerHeight) {
+        el.classList.add("visible");
+        el.querySelectorAll(".stat-num").forEach(animateCounter);
+      }
+    });
+  }, 100);
 })();
 
 /* ============================================================
@@ -376,7 +387,7 @@ function animateCounter(el) {
         io.unobserve(el);
       }
     });
-  }, { threshold: 0.1 });
+  }, { threshold: 0 });
 
   document.querySelectorAll(".product-card").forEach(c => io.observe(c));
 })();
@@ -419,7 +430,7 @@ function animateCounter(el) {
         io.unobserve(el);
       }
     });
-  }, { threshold: 0.1 });
+  }, { threshold: 0 });
 
   document.querySelectorAll(".review-card").forEach(c => io.observe(c));
 })();
@@ -457,7 +468,7 @@ function animateCounter(el) {
         io.unobserve(el);
       }
     });
-  }, { threshold: 0.1 });
+  }, { threshold: 0 });
 
   document.querySelectorAll(".link-card").forEach(c => io.observe(c));
 })();
@@ -574,17 +585,4 @@ document.addEventListener("keydown", (e) => {
    ============================================================ */
 (function initHeroCounters() {
   const statsEl = document.querySelector(".hero-stats");
-  if (!statsEl) return;
-
-  statsEl.innerHTML = "";
-  heroStats.forEach((s, i) => {
-    if (i > 0) {
-      const div = document.createElement("div");
-      div.className = "stat-divider";
-      statsEl.appendChild(div);
-    }
-    const stat = document.createElement("div");
-    stat.className = "stat";
-    stat.innerHTML = `
-      <div class="stat-row">
-        <span class="stat-num" data-target="${
+  if (!statsE
