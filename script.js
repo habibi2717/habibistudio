@@ -5,23 +5,20 @@
 
 "use strict";
 
-/* ============================================================
-   ✏️  EDITABLE DATA — Update all content here
-   ============================================================ */
-
-/* ---- HERO STATS — edit numbers & labels here ---- */
+/* ---- HERO STATS ---- */
 const heroStats = [
-  { target: 8, suffix: "+", label: "Customers" },
-  { target: 3, suffix: "+", label: "Products"  },
+  { target: 500, suffix: "+", label: "Customers" },
+  { target: 20,  suffix: "+", label: "Products"  },
   { target: 5,   suffix: "★", label: "Rating"    }
 ];
 
+/* ---- PRODUCTS DATA — all BuiltByBit listings ---- */
 const products = [
   {
     name: "Beyond Survival Setup",
     price: "$9.99",
-    status: "available",   // ← "available" or "coming_soon"
-    description: "A fully-featured survival server package perfect for growing communities. Comes pre-configured with anti-cheat, economy, land claiming, and beautifully custom-built spawn.",
+    status: "available",
+    description: "A fully-featured survival server package perfect for growing communities. Pre-configured with anti-cheat, economy, land claiming, and a beautifully custom-built spawn.",
     features: [
       "Custom hand-built spawn (200x200)",
       "EssentialsX full configuration",
@@ -32,44 +29,117 @@ const products = [
       "Discord bot integration"
     ],
     images: [
-      "https://cdn.discordapp.com/attachments/1490693971813466133/1507586085717414010/Gemini_Generated_Image_8ybsuo8ybsuo8ybs.png?ex=6a127074&is=6a111ef4&hm=b144d405285f69a6f195eecd87e991d769cd3a0cd5e0a1cb305d42cd8d6041bf&96e4be0eaa6b289bcb60dc4e821f0d13ef76&bb2987198260&c00061c40a4ce58ccc9eb4a34574ada73f2f2d9ecac9&"
+      "https://static.builtbybit.com/attachments/resource/96782/icon/icon.png?1746713985"
     ],
     buyLink: "https://builtbybit.com/resources/beyond-survival-setup-habibi-studios.96782/"
   },
   {
     name: "Beyond Survival Spawn",
     price: "$3.99",
-    status: "available",   // ← "available" or "coming_soon"
-    description: "Affordable, well-designed spawn featuring a crate area, AFK zone, spawn point, shop area, and PvP.",
+    status: "available",
+    description: "Affordable, well-designed spawn featuring a crate area, AFK zone, spawn point, shop area, and PvP Colosseum — drop-in ready.",
     features: [
       "Houses with interiors",
       "PvP Colosseum arena",
-      "2 places for Crates",
+      "2 crate placement areas",
       "3 ports with ships",
-      "16 places for NPCs",
-      "Drop-down portal",
+      "16 NPC spots",
+      "Drop-down portal"
     ],
     images: [
-      "https://cdn.discordapp.com/attachments/1490693971813466133/1507586085285269565/20260307_103913.png?ex=6a127074&is=6a111ef4&hm=497d544e3207bb1553d2a82483c1fbe0b8340d2efdb2565302898a7fb43426af&bb2987198260&",
-      
+      "https://static.builtbybit.com/attachments/resource/97428/icon/icon.png?1746714051"
     ],
     buyLink: "https://builtbybit.com/resources/beyond-survival-spawn-nfx-studio.97428/"
   },
   {
-    name: "PLAYKITS 2 Advance Kits Conflig",
+    name: "PlayerKits2 Advanced Config",
     price: "$2.99",
-    status: "available", // ← "available" or "coming_soon"
-    description: "A fully configured kit system including pre-made kits, a main menu, and customizable messages.",
+    status: "available",
+    description: "A fully configured kit system with pre-made kits, a main menu, rank gradients, right-click preview, and customisable messages.",
     features: [
       "Good looking kit menu",
       "5 different kits",
+      "Custom rank gradient colours",
+      "Right-click preview support",
       "Custom messages",
-      "Easy to edit"
+      "Easy to edit YAML"
     ],
     images: [
-      "https://cdn.discordapp.com/attachments/1490693971813466133/1507587278883786853/20260414_201639.jpg?ex=6a127190&is=6a112010&hm=574df969a71f9ad92ab357457e1ea3d05aa6c083eeb3e0440465148c043e444d&9ce6cbe54823cac59f190d671a9d778e75721ee6a30bf0&3f2f2d9ecac9&",
+      "https://static.builtbybit.com/attachments/resource/103511/icon/icon.png?1746714109"
     ],
     buyLink: "https://builtbybit.com/resources/playkits-2-advance-kits-conflig-hs.103511/"
+  },
+  {
+    name: "EconomyShopGUI — Lumen Pack",
+    price: "$6.99",
+    status: "available",
+    description: "53 YAML shop configs across 16 shop sections. 'Lumen' purple/gold theme with Unicode small caps branding and 20 language files included.",
+    features: [
+      "53 YAML files, 16 shop sections",
+      "20 language files",
+      "Purple/gold 'Lumen' theme",
+      "Unicode small caps branding",
+      "Plug-and-play ready",
+      "Full documentation"
+    ],
+    images: [
+      "https://static.builtbybit.com/attachments/resource/110972/icon/icon.png?1746714187"
+    ],
+    buyLink: "https://builtbybit.com/resources/shop-configuration-habibi-studios.110972/"
+  },
+  {
+    name: "BlitzarMC Lifesteal SMP Setup",
+    price: "$14.99",
+    status: "available",
+    description: "Complete Paper 1.21.x Lifesteal SMP configuration pack — crates, kits, coin shop, TAB, FancyHolograms leaderboards, DeluxeMenus, and more.",
+    features: [
+      "4 crate configs (Action/Legendary/Unknown/Rare)",
+      "CoinShop with CoinsEngine placeholders",
+      "14-rank TAB with MiniMessage hex colours",
+      "10 FancyHolograms leaderboards",
+      "DeluxeMenus leaderboard GUI",
+      "Skript fly, join/leave, bossbar",
+      "Full LuckPerms rank setup"
+    ],
+    images: [
+      "https://static.builtbybit.com/attachments/resource/96782/icon/icon.png?1746713985"
+    ],
+    buyLink: "https://builtbybit.com/creators/habibi-studios.490471/"
+  },
+  {
+    name: "Habibi Moderation Bot",
+    price: "Free",
+    status: "available",
+    description: "A powerful all-in-one Discord moderation bot built with discord.js v14 and MongoDB. 22+ feature systems including moderation, tickets, music, economy, leveling, and giveaways — full source code included.",
+    features: [
+      "22+ modular feature systems",
+      "Moderation, tickets, music, economy",
+      "Leveling, giveaways, automod",
+      "discord.js v14 + MongoDB",
+      "Components V2 UI",
+      "Full source code delivered",
+      "Prefix: = | Brand color: #6B5BFF"
+    ],
+    images: [
+      "https://static.builtbybit.com/attachments/resource/109090/icon/icon.png?1746714300"
+    ],
+    buyLink: "https://builtbybit.com/resources/habibi-modaretion-source-code-hs.109090/"
+  },
+  {
+    name: "Custom Plugin Development",
+    price: "Quote",
+    status: "available",
+    description: "Need something bespoke? We build Paper/Spigot plugins with Vault, Redis, multi-database support, and clean Maven/Gradle project structure.",
+    features: [
+      "Paper 1.21+ compatible",
+      "Vault / economy integration",
+      "Redis & multi-database support",
+      "Maven or Gradle build structure",
+      "Full source delivered",
+      "Post-delivery support"
+    ],
+    images: [],
+    buyLink: "https://discord.gg/j4ESaraHec"
   }
 ];
 
@@ -83,27 +153,27 @@ const reviews = [
   {
     name: "wru",
     rating: 5,
-    text: "This is great server setup thankful this all works)"
+    text: "This is great server setup, thankful this all works!"
   },
   {
     name: "sirmidnight",
     rating: 5,
-    text: "Got the Factions Pro Bundle and my community went absolutely wild. The cannon configs are perfectly balanced and the event scheduler saved me so much time. 10/10 would recommend."
+    text: "Got the setup and my community went absolutely wild. The configs are perfectly balanced and saved me so much time. 10/10 would recommend."
   },
   {
     name: "StargazerDev",
     rating: 4,
-    text: "The SkyBlock setup is stunning. A few plugins needed updating on my end but the support chat helped me sort it in under 30 minutes. Quality is top-notch."
+    text: "The spawn is stunning. A few plugins needed updating on my end but the support chat helped me sort it in under 30 minutes. Quality is top-notch."
   },
   {
     name: "VoidwalkerPvP",
     rating: 5,
-    text: "Been running my prison server for 3 months now and I still can't believe how polished everything is. Players always ask who built it. I proudly say Habibi Studio every time."
+    text: "Been running my server for 3 months now and I still can't believe how polished everything is. Players always ask who built it — I say Habibi Studio every time."
   },
   {
     name: "CrystalMC_Owner",
     rating: 5,
-    text: "I'm not very technical and was worried the setup would be confusing. But the installation guide was so clear that even I managed it in under 2 hours. Amazing product, amazing team."
+    text: "I'm not very technical and was worried the setup would be confusing. But the installation guide was so clear that even I managed it in under 2 hours. Amazing product!"
   }
 ];
 
@@ -111,24 +181,31 @@ const reviews = [
 const links = [
   {
     icon: "🛒",
-    title: "Shop",
-    desc: "Browse all products, bundles, and exclusive server packages on our official BuiltByBit storefront.",
+    title: "BuiltByBit Store",
+    desc: "Browse all products, setups, configs, and exclusive packages on our official BuiltByBit storefront.",
     label: "Open Store",
     href: "https://builtbybit.com/creators/habibi-studios.490471/"
   },
   {
+    icon: "💬",
+    title: "Discord",
+    desc: "Join our Discord for live support, community discussions, free resources, and server advice.",
+    label: "Join Discord",
+    href: "https://discord.gg/j4ESaraHec"
+  },
+  {
     icon: "📖",
     title: "Help Docs",
-    desc: "Step-by-step installation guides, FAQs, plugin compatibility lists, and video tutorials.",
+    desc: "Step-by-step installation guides, FAQs, plugin compatibility lists, and tutorials.",
     label: "Read Docs",
     href: "https://docs.habibidevelopment.com/"
   },
   {
-    icon: "💬",
-    title: "Support",
-    desc: "Join our Discord server for live support, community discussions, free resources, and server advice.",
-    label: "Join Discord",
-    href: "https://discord.gg/ZkPCEMjsVN"
+    icon: "🌍",
+    title: "Website",
+    desc: "Visit our main website for more info about Habibi Studios and what we offer.",
+    label: "Visit Site",
+    href: "https://habibidevolopment.com"
   }
 ];
 
@@ -165,11 +242,9 @@ const links = [
   const sections = document.querySelectorAll("section[id]");
 
   window.addEventListener("scroll", () => {
-    // Sticky style
     if (window.scrollY > 30) navbar.classList.add("scrolled");
     else navbar.classList.remove("scrolled");
 
-    // Active link highlight
     let current = "";
     sections.forEach(sec => {
       if (window.scrollY >= sec.offsetTop - 120) current = sec.id;
@@ -212,7 +287,6 @@ function animateCounter(el) {
   function step(now) {
     const elapsed = now - start;
     const progress = Math.min(elapsed / duration, 1);
-    // easeOutExpo
     const eased = progress === 1 ? 1 : 1 - Math.pow(2, -10 * progress);
     el.textContent = Math.round(eased * target);
     if (progress < 1) requestAnimationFrame(step);
@@ -225,22 +299,17 @@ function animateCounter(el) {
    ============================================================ */
 (function initReveal() {
   const io = new IntersectionObserver((entries) => {
-    entries.forEach((entry, i) => {
+    entries.forEach((entry) => {
       if (entry.isIntersecting) {
         const el = entry.target;
-
-        // Stagger for grids
         const delay = el.dataset.delay ? parseFloat(el.dataset.delay) : 0;
         setTimeout(() => {
           el.classList.add("visible");
-
-          // Trigger counters inside heroes
           el.querySelectorAll(".stat-num").forEach(animateCounter);
           if (el.classList.contains("hero-stats")) {
             el.querySelectorAll(".stat-num").forEach(animateCounter);
           }
         }, delay);
-
         io.unobserve(el);
       }
     });
@@ -273,13 +342,8 @@ function animateCounter(el) {
       ? `<img src="${p.images[0]}" alt="${p.name}" loading="lazy" />`
       : `<div class="img-placeholder"><span>🎮</span><small>Preview</small></div>`;
 
-    const hintHTML = isComingSoon
-      ? ``
-      : `<div class="product-view-hint">View Details →</div>`;
-
-    const badgeHTML = isComingSoon
-      ? `<div class="coming-soon-badge"><span class="cs-dot"></span>Coming Soon</div>`
-      : ``;
+    const hintHTML = isComingSoon ? `` : `<div class="product-view-hint">View Details →</div>`;
+    const badgeHTML = isComingSoon ? `<div class="coming-soon-badge"><span class="cs-dot"></span>Coming Soon</div>` : ``;
 
     card.innerHTML = `
       <div class="product-img-wrap">
@@ -294,7 +358,6 @@ function animateCounter(el) {
       </div>
     `;
 
-    // Only open modal if available
     if (!isComingSoon) {
       const open = () => openModal(idx);
       card.addEventListener("click", open);
@@ -304,7 +367,6 @@ function animateCounter(el) {
     grid.appendChild(card);
   });
 
-  // Observe for reveal
   const io = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -349,7 +411,6 @@ function animateCounter(el) {
     grid.appendChild(card);
   });
 
-  // Observe
   const io = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -412,12 +473,10 @@ function openModal(productIdx) {
   const p = products[productIdx];
   if (!p) return;
 
-  // Populate text content
   document.getElementById("modalTitle").textContent = p.name;
   document.getElementById("modalPrice").textContent = p.price;
   document.getElementById("modalDesc").textContent   = p.description;
 
-  // Features list
   const featuresList = document.getElementById("modalFeatures");
   featuresList.innerHTML = "";
   (p.features || []).forEach(f => {
@@ -426,17 +485,14 @@ function openModal(productIdx) {
     featuresList.appendChild(li);
   });
 
-  // Buy button
   const buyBtn  = document.getElementById("modalBuy");
   const buyText = document.getElementById("modalBuyText");
   buyBtn.href = p.buyLink || "#";
-  buyText.textContent = `Buy Now for ${p.price}`;
+  buyText.textContent = p.price === "Quote" ? "Get a Quote" : `Buy Now — ${p.price}`;
 
-  // Build slideshow
   currentImages = p.images && p.images.length ? p.images : [];
   buildSlideshow(currentImages);
 
-  // Open overlay
   document.getElementById("modalOverlay").classList.add("open");
   document.body.style.overflow = "hidden";
 }
@@ -491,24 +547,16 @@ function goToSlide(n) {
 function startSlideTimer() {
   clearInterval(slideTimer);
   if (currentImages.length <= 1) return;
-  slideTimer = setInterval(() => {
-    goToSlide(currentSlide + 1);
-  }, 5000);
+  slideTimer = setInterval(() => { goToSlide(currentSlide + 1); }, 5000);
 }
 
-// Slide controls
 document.getElementById("slidePrev").addEventListener("click", () => {
-  clearInterval(slideTimer);
-  goToSlide(currentSlide - 1);
-  startSlideTimer();
+  clearInterval(slideTimer); goToSlide(currentSlide - 1); startSlideTimer();
 });
 document.getElementById("slideNext").addEventListener("click", () => {
-  clearInterval(slideTimer);
-  goToSlide(currentSlide + 1);
-  startSlideTimer();
+  clearInterval(slideTimer); goToSlide(currentSlide + 1); startSlideTimer();
 });
 
-// Close handlers
 document.getElementById("modalClose").addEventListener("click", closeModal);
 document.getElementById("modalOverlay").addEventListener("click", (e) => {
   if (e.target === document.getElementById("modalOverlay")) closeModal();
@@ -522,13 +570,12 @@ document.addEventListener("keydown", (e) => {
 });
 
 /* ============================================================
-   COUNTER TRIGGER — renders stats from heroStats data & animates
+   COUNTER TRIGGER
    ============================================================ */
 (function initHeroCounters() {
   const statsEl = document.querySelector(".hero-stats");
   if (!statsEl) return;
 
-  // Rebuild stat elements from heroStats data
   statsEl.innerHTML = "";
   heroStats.forEach((s, i) => {
     if (i > 0) {
@@ -540,21 +587,4 @@ document.addEventListener("keydown", (e) => {
     stat.className = "stat";
     stat.innerHTML = `
       <div class="stat-row">
-        <span class="stat-num" data-target="${s.target}">0</span><span class="stat-suffix">${s.suffix}</span>
-      </div>
-      <small>${s.label}</small>
-    `;
-    statsEl.appendChild(stat);
-  });
-
-  const io = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.querySelectorAll(".stat-num").forEach(animateCounter);
-        io.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.5 });
-
-  io.observe(statsEl);
-})();
+        <span class="stat-num" data-target="${
